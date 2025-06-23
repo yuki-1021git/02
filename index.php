@@ -166,6 +166,7 @@ htmlからのテンプレート化です。クライアント様にあった<br>
     <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
     <textarea name="message" class="Form-Item-Textarea"></textarea>
   </div>
+  <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
   <input type="submit" class="Form-Btn" value="送信する">
 </div>
 </form>
