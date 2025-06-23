@@ -38,56 +38,6 @@
   </header>
 
  <main>
-  <!-- <div class="slide-container">
-  <img class="slide active" src="img/DSC06037.jpg" alt="main-view">
-  <img class="slide" src="img/DSC06233.jpg" alt="">
-</div> -->
-
-
-<!-- <svg id="sample-1" width="80vw" height="100">
-  <symbol id="K" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">K</text>
-  </symbol>
-
-  <symbol id="e" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">e</text>
-  </symbol>
-
-  <symbol id="p" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">p</text>
-  </symbol>
-
-  <symbol id="G" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">G</text>
-  </symbol>
-
-  <symbol id="o" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">o</text>
-  </symbol>
-
-  <symbol id="i" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">i</text>
-  </symbol>
-
-  <symbol id="n" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">n</text>
-  </symbol>
-
-  <symbol id="g" viewBox="0 0 40 100">
-    <text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">g</text>
-  </symbol>
-
-  1文字ずつuseで並べる 
-  <use href="#K" x="0" y="0" class="fadein" style="animation-delay:0s"/>
-  <use href="#e" x="40" y="0" class="fadein" style="animation-delay:0.2s"/>
-  <use href="#e" x="80" y="0" class="fadein" style="animation-delay:0.4s"/>
-  <use href="#p" x="120" y="0" class="fadein" style="animation-delay:0.6s"/>
-  <use href="#G" x="200" y="0" class="fadein" style="animation-delay:0.8s"/>
-  <use href="#o" x="240" y="0" class="fadein" style="animation-delay:1s"/>
-  <use href="#i" x="280" y="0" class="fadein" style="animation-delay:1.2s"/>
-  <use href="#n" x="295" y="0" class="fadein" style="animation-delay:1.4s"/>
-  <use href="#g" x="335" y="0" class="fadein" style="animation-delay:1.6s"/>
-</svg> -->
 <div id="svg-container">
 <svg viewBox="0 0 1000 100" width="70%" height="auto" style="max-width:100%;">
   <symbol id="P" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">P</text></symbol>
@@ -97,8 +47,6 @@
   <symbol id="i" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">i</text></symbol>
   <symbol id="l" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">l</text></symbol>
   <symbol id="e" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">e</text></symbol>
-  <!-- <symbol id="n" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">n</text></symbol>
-  <symbol id="g" viewBox="0 0 40 100"><text x="0" y="70" font-size="70" fill="#333" font-family="sans-serif">g</text></symbol> -->
 
 
   <use href="#P" x="0" y="0" class="fadein" style="animation-delay:0s"/>
@@ -194,31 +142,33 @@ htmlからのテンプレート化です。クライアント様にあった<br>
 </section>
 
 <section id="contact">
+  <form action="send_mail.php" method="post" class="Form">
   <div class="Form">
   <div class="Form-Item">
     <p class="Form-Item-Label">
       <span class="Form-Item-Label-Required">必須</span>会社名
     </p>
-    <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
+    <input type="text" name="company" class="Form-Item-Input" placeholder="例）株式会社令和">
   </div>
   <div class="Form-Item">
     <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>お名前</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
+    <input type="text" name="name" class="Form-Item-Input" placeholder="例）山田太郎">
   </div>
   <div class="Form-Item">
     <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
-    <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+    <input type="text" name="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
   </div>
   <div class="Form-Item">
     <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-    <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+    <input type="email" name="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
   </div>
   <div class="Form-Item">
     <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-    <textarea class="Form-Item-Textarea"></textarea>
+    <textarea name="message" class="Form-Item-Textarea"></textarea>
   </div>
   <input type="submit" class="Form-Btn" value="送信する">
 </div>
+</form>
 </section>
 
 <footer id="footer">
