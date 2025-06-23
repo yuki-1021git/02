@@ -1,0 +1,514 @@
+@charset "UTF-8";
+
+html,body {
+  font-size: 100%;
+  color: #000000;
+  font-family: ab-kinmokusei-kuro, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ================================
+====================================menu-list */
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #aeffba;
+  height: 15vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-img {
+  width: 20%;
+  position: relative;
+}
+
+#menu-list {
+  display: flex;
+  margin: 0 auto;
+}
+
+#menu-list li {
+  display: flex;
+  color: #000000;
+  margin: 3% 3%;
+}
+
+#menu-list li a {
+  margin: 1em;
+  letter-spacing: 2px;
+}
+
+/* ============================================================== 
+================================================first-view*/
+/* .slide-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  z-index: -10;
+  margin-top: 15vh;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+} */
+/* =================================================================
+=================================================== */
+
+/* 追加: 一文字ずつフェードイン */
+.fadein {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+#svg-container {
+  width: 100%;
+  max-width: 100%;
+  margin:  0 auto auto -9em;   /*　-7emで中央寄せ */
+  display: flex;       
+  align-items: center;   /* 追加 */
+  justify-content: center;/* 追加 */
+  align-items: center;    /* 追加（縦方向も中央寄せしたい場合） */
+}
+
+#svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10em;
+  max-width: 100%;
+}
+
+/* ================================================================
+================================================sectiom-me*/
+#me {
+  margin: 2em auto 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.text {
+  display: flex;
+}
+
+.me-text {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#me dl {
+  display: block; /* またはflex-direction: column; */
+  width: 40%;
+  margin-left: 2em;
+}
+
+#me dl {
+  width: 40%;
+  margin-left: 2em;
+}
+
+.dl-row {
+  display: flex;
+  margin-bottom: 0.5em;
+  align-items: baseline;
+}
+
+#me dl dt {
+  min-width: 4em;
+  font-weight: bold;
+}
+
+#me dl dt::after {
+  content: ":";
+  margin-right: 0.5em;
+}
+
+#me dl dd {
+  margin: 0;
+  padding: 0;
+}
+
+.text-work {
+  width: 60%;
+}
+
+.me-title {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1em auto;
+}
+
+/* =======================================================
+===============================================product */
+#product {
+  margin-top: 10em;
+  padding: 3em;
+}
+
+#product h4 {
+  margin: 0 1em 1em;
+}
+
+.product-text {
+  width: 40%;                  /* テキストの幅を調整 */
+  margin-left: 2em;            /* 画像との間隔 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* 中央寄せ（下寄せならflex-end） */
+  height: 100%;                /* 親の高さに合わせる */
+}
+
+#product .product-text h3 {
+  margin: 0 0 1em;
+}
+
+#product .product-text p {
+  margin: 0 1em 1em;
+}
+
+.product-1 {
+  display: flex;
+  flex-direction: row;         /* 横並び（デフォルト） */
+  align-items: flex-end;       /* 子要素を下揃え（中央ならcenter） */
+  justify-content: flex-start; /* 左寄せ */
+}
+
+
+
+.product-img-1 {
+  width: 60%;                  /* 画像の幅を調整 */
+  display: flex;
+  align-items: flex-end;       /* 画像を下揃え（中央ならcenter） */
+  justify-content: center;
+  transition: box-shadow 0.4s cubic-bezier(.77,0,.18,1); /* 追加: なめらかに影をつける */
+}
+
+.product-img-1:hover {
+  box-shadow: 0 12px 32px 0 rgba(0,0,0,1), 0 2px 8px 0 rgba(0,0,0,0.15);
+  /* 影の強さや広がりはお好みで調整 */
+}
+
+.product-img-1 img {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: cover; /* 必要に応じて追加 */
+}
+
+/* =====================================================================
+=====================================================-polygon */
+ #skill .title {
+  text-align: center;
+  font-size: 5em;
+  letter-spacing: 0.2em;
+  margin: 0 auto 1em auto;
+}
+
+#skill {
+  margin-top: 15em;
+  display: block;
+  text-align: center;
+}
+
+.skills-wrapper {
+  position: relative;
+  width: 100%;
+  height: 30em; /* 必要に応じて調整 */
+  margin: 0 auto;
+  display: block;
+}
+
+.skill-01, .js, .wp, .studio, .ps {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  width: 7em;
+  height: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000000;
+  background: #aeffba;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  margin: 0;
+  padding: 0;
+} 
+
+
+
+/* skill-name全体をアニメーション対象に */
+.skill-name {
+  position: relative;
+}
+
+/* 各五角形の初期位置を.skill-01の位置に重ねる */
+.skill-01, .js, .wp, .studio, .ps {
+  position: absolute;
+  left: 50%;  /* skill-01の中心に重ねる */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 
+    left 1s cubic-bezier(.77,0,.18,1),
+    top 1s cubic-bezier(.77,0,.18,1),
+    opacity 0.5s;
+}
+
+/* アニメーション後の各五角形の配置（例：グリッドの各位置に） */
+#skill.animated .skill-01  { left: 30%;  top: 15%;  opacity: 1; }
+#skill.animated .js        { left: 70%;  top: 15%;  opacity: 1; }
+#skill.animated .wp        { left: 30%;  top: 60%;  opacity: 1; }
+#skill.animated .studio    { left: 70%;  top: 60%;  opacity: 1; }
+#skill.animated .ps        { left: 50%;  top: 100%;  opacity: 1; }
+/* ============================================================================
+=============================================================form */
+.Form {
+  margin-top: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 70%;
+  display: flex
+;
+    align-items: center;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: #fff;
+  font-size: 14px;
+}
+
+.Form-Item-Input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 3em;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    background: #eaedf2;
+    font-size: 1em;
+}
+
+.Form-Item-Textarea {
+      border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-left: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 10em;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    background: #eaedf2;
+    font-size: 1em;
+}
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #ffffff;
+  color: #5bc8ac;
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px solid #5bc8ac; /* 追加：外枠 */
+  box-sizing: border-box; 
+}
+
+
+.Form-Btn {
+  transition: .4s cubic-bezier(0.37, 0, 0.63, 1);
+}
+.Form-Btn:hover {
+  background: #5bc8ac;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+}
+
+#footer {
+  margin-top: 7em;
+  background: url('img/AdobeStock_272779037.jpg') center/cover no-repeat; /* 画像パスは適宜変更 */
+  color: #fff;
+  padding: 2em 0 1em 0;
+  text-align: center;
+  position: relative;
+}
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 1em;
+  padding: 0;
+  list-style: none;
+}
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  transition: color 0.2s;
+}
+.footer-menu a:hover {
+  color: #5bc8ac;
+}
+.footer-copy {
+  font-size: 1.2em;
+  opacity: 0.7;
+}
+
+/* ==================================================
+=======================================レスポンシブ */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 100%;
+  }
+
+  #header {
+    height: 6em;
+  }
+  .product-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-text, .product-img-1 {
+    width: 100%;
+    margin: 0;
+  }
+  .skills-wrapper {
+    height: 20em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 4em;
+  }
+
+  #svg-container {
+    margin: 0 auto auto -3em;
+  }
+
+  .me-text{
+    width: 85%;
+  }
+
+  .product-text {
+    margin-top: 1em;
+  }
+
+  #skill.animated .skill-01  { left: 25%;  top: 15%;  opacity: 1; }
+#skill.animated .js        { left: 75%;  top: 15%;  opacity: 1; }
+#skill.animated .wp        { left: 25%;  top: 75%;  opacity: 1; }
+#skill.animated .studio    { left: 75%;  top: 75%;  opacity: 1; }
+#skill.animated .ps        { left: 50%;  top: 130%;  opacity: 1; }
+
+.Form-Item {
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.Form-Item-Input {
+  width: 80%;
+  margin-top: 1em;
+}
+
+.Form-Item-Textarea {
+  flex: none;
+  margin-top: 1em;
+}
+}
